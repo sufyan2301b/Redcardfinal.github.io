@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RED CARD LIMITED</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="goto-here">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-danger ftco-navbar-dark" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">RED CARD</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span>Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="shop.html">Shop</a>
+                <a class="dropdown-item" href="product-single.html">Single Product</a>
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_6.jpg');">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-0 bread">Contact Us</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section contact-section bg-light">
+      <div class="container">
+      	<div class="row d-flex mb-5 contact-info">
+          <div class="w-100"></div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Address:</span> Garden East, Karachi</p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Phone:</span> +92 3365390346</p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Email:</span> sufyanbawany@gmail.com</p>
+	          </div>
+          </div>
+          <div class="col-md-3 d-flex">
+          	<div class="info bg-white p-4">
+	            <p><span>Website</span> <a href="#"></a></p>
+	          </div>
+          </div>
+        </div>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "T2u6jDjBRil_XRrww",
+      });
+   })();
+</script>
+<style>
+  .contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .error {
+    color: red;
+    font-size: 12px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div class="container mt-5">
+  <div class="row block-9">
+    <div class="col-md-6 d-flex">
+      <div id="map"></div>
+    </div>
+    <div class="col-md-6 order-md-last d-flex">
+      <form id="contactForm" class="bg-white p-5 contact-form">
+        <div class="form-group">
+          <input type="text" id="name" class="form-control" placeholder="Enter your name">
+          <span id="nameError" class="error"></span>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+          <span id="emailError" class="error"></span>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" class="form-control" placeholder="Enter the subject" required>
+          <span id="subjectError" class="error"></span>
+        </div>
+        <div class="form-group">
+          <textarea id="message" cols="30" rows="7" class="form-control" placeholder="Enter your message"></textarea>
+          <span id="messageError" class="error"></span>
+        </div>
+        <div class="form-group">
+          <input type="submit" onclick="sendMail()" value="Send Message" class="btn btn-primary py-3 px-5">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function sendMail() {
+    let parms = {
+              user_name : document.getElementById("name").value,
+              user_email : document.getElementById("email").value,
+              user_subject : document.getElementById("subject").value,
+              user_message : document.getElementById("message").value,
+            }
+            emailjs.send("service_hfr0ejb","template_a1gq3po",parms).then(alert("Email Sent Successfully"))
+          }
+</script>        
+        <script>
+        // document.addEventListener("DOMContentLoaded", function () {
+        //   // Initialize EmailJS
+        //   emailjs.init("0QjtYggtNvYoQcEmY"); // Replace with your EmailJS user ID
+        //   console.log("EmailJS initialized");
+        
+        //   // Form validation and submission
+        //   document.getElementById("contactForm").addEventListener("submit", function (e) {
+        //     e.preventDefault(); // Prevent form from submitting normally
+        
+        //     // Clear previous error messages
+        //     document.getElementById("nameError").textContent = "";
+        //     document.getElementById("emailError").textContent = "";
+        //     document.getElementById("subjectError").textContent = "";
+        //     document.getElementById("messageError").textContent = "";
+        
+        //     // Form values
+        //     const name = document.getElementById("name").value.trim();
+        //     const email = document.getElementById("email").value.trim();
+        //     const subject = document.getElementById("subject").value.trim();
+        //     const message = document.getElementById("message").value.trim();
+        
+        //     // Validation
+        //     let isValid = true;
+        //     if (!name) {
+        //       document.getElementById("nameError").textContent = "Name is required.";
+        //       isValid = false;
+        //     }
+        //     if (!email || !/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+        //       document.getElementById("emailError").textContent = "Valid email is required.";
+        //       isValid = false;
+        //     }
+        //     if (!subject) {
+        //       document.getElementById("subjectError").textContent = "Subject is required.";
+        //       isValid = false;
+        //     }
+        //     if (!message) {
+        //       document.getElementById("messageError").textContent = "Message is required.";
+        //       isValid = false;
+        //     }
+        
+        //     if (!isValid) return;
+        
+        //     // Send email using EmailJS
+        //     console.log("Sending email...");
+        //     emailjs
+        //       .send("service_hfr0ejb", "template_a1gq3po", {
+        //         user_name: name,
+        //         user_email: email,
+        //         user_subject: subject,
+        //         user_message: message,
+        //       })
+        //       .then(
+        //         function (response) {
+        //           console.log("Message sent successfully:", response);
+        //           alert("Message sent successfully!");
+        //           document.getElementById("contactForm").reset(); // Reset form after submission
+        //         },
+        //         function (error) {
+        //           console.error("Failed to send message:", error);
+        //           alert("Failed to send message. Please try again later.");
+        //         }
+        //       );
+        //   });
+        // });</script>
+
+<!-- 
+<style>
+  .error {
+color: red;
+font-size: 0.9em;
+}
+</style> -->
+    </section>
+    
+    
+    
+    <!-- Footer -->
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row">
+        <div class="mouse text-center mb-4">
+          <a href="#" class="mouse-icon" aria-label="Back to top">
+          <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+          </a>
+        </div>
+        </div>
+      
+        <div class="row mb-5">
+        <!-- Brand Section -->
+        <div class="col-md-3 mb-4">
+          <div class="ftco-footer-widget">
+          <h2 class="ftco-heading-2">RED CARD</h2>
+          <p>Your trusted partner, available 24/7 for your needs.</p>
+          <ul class="ftco-footer-social list-unstyled mt-4">
+            <li class="ftco-animate">
+            <a href="https://www.facebook.com/sufyanbawany1/" aria-label="Facebook" class="social-icon">
+              <span class="icon-facebook"></span>
+            </a>
+            </li>
+            <li class="ftco-animate">
+            <a href="https://www.instagram.com/sufyanbawany2/" aria-label="Instagram" class="social-icon">
+              <span class="icon-instagram"></span>
+            </a>
+            </li>
+            <li class="ftco-animate">
+            <a href="https://www.linkedin.com/in/sufyan-bawany-85041029a/" aria-label="LinkedIn" class="social-icon">
+              <span class="icon-linkedin"></span>
+            </a>
+            </li>
+          </ul>
+          </div>
+        </div>
+      
+        <!-- Menu Section -->
+        <div class="col-md-3 mb-3">
+          <div class="ftco-footer-widget">
+          <h2 class="ftco-heading-2">Menu</h2>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="py-2 d-block footer-link">About Us</a></li>
+            <li><a href="blog.html" class="py-2 d-block footer-link">Blog</a></li>
+            <li><a href="blog-single.html" class="py-2 d-block footer-link">Blog-Single</a></li>
+            <li><a href="shop.html" class="py-2 d-block footer-link">Shop</a></li>
+          </ul>
+          </div>
+        </div>
+      
+        <!-- Shop & Services Section -->
+        <div class="col-md-3 mb-3">
+          <div class="ftco-footer-widget">
+          <h2 class="ftco-heading-2">Shop & Services</h2>
+          <div class="d-flex">
+            <ul class="list-unstyled mr-4">
+            <li><a href="product-single.html" class="py-2 d-block footer-link">Product Single</a></li>
+            <li><a href="cart.html" class="py-2 d-block footer-link">Cart</a></li>
+            <li><a href="checkout.html" class="py-2 d-block footer-link">Checkout</a></li>
+            <li><a href="contact.html" class="py-2 d-block footer-link">Contact</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      
+        <!-- Contact Section -->
+        <div class="col-md-3 mb-4">
+          <div class="ftco-footer-widget">
+          <h2 class="ftco-heading-2">Have a Question?</h2>
+          <ul class="block-23 list-unstyled">
+            <li class="mb-3">
+            <span class="icon icon-map-marker" style="font-size: 24px; padding: .3rem;"></span>
+            <span class="text">Garden East, Karachi, Pakistan</span>
+            </li>
+            <li class="mb-3">
+            <a href="tel:+923365390346" class="footer-link">
+              <span class="icon icon-phone" style="font-size: 24px; padding: .3rem;"></span>
+              <span class="text">+92 336 5390346</span>
+            </a>
+            </li>
+            <li>
+            <a href="mailto:sufyanbawany@gmail.com" class="footer-link">
+              <span class="icon icon-envelope" style="font-size: 24px; padding: .3rem;"></span>
+              <span class="text">sufyanbawany@gmail.com</span>
+            </a>
+            </li>
+          </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+      </footer>
+      
+      <style>
+      .footer-link {
+        color: #555; /* Subtle color */
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+      }
+      
+      .footer-link:hover {
+        color: whitesmoke; 
+        text-decoration: none;
+      }
+      
+      .social-icon {
+        font-size: 1.5rem;
+        color: #555; 
+        transition: color 0.4s ease;
+      }
+      
+      .social-icon:hover {
+        color: whitesmoke; 
+      }
+      
+      .ftco-footer-widget h2 {
+        font-size: 1.4rem;
+        color: #333;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+      }
+      
+      .ftco-footer-widget h2:hover {
+        color: wheat; 
+      }
+      
+      .ftco-footer-widget .list-unstyled li {
+        margin-bottom: 10px;
+      }
+      
+      .ftco-footer-widget .list-unstyled li a {
+        color: #666;
+        transition: color 0.3s ease;
+      }
+      
+      .ftco-footer-widget .list-unstyled li a:hover {
+        color: wheat; 
+        text-decoration: none;
+      }
+      </style>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Form Validation -->
+
+  <!-- <script>  
+    function fomrvalidation()
+      {
+          let username = document.getElementById("username").value;
+          let useremail = document.getElementById("useremail").value;
+          let pass = document.getElementById("pass").value;
+          let cpass = document.getElementById("cpass").value;
+
+          let namevaluecheck = /^[A-Za-z]{3,10}$/;
+          let emailvaluecheck = /^[A-Za-z_]{3,}[0-9_]*@[A-Za-z]{5,}[.]{1}[A-Za-z.]{2,6}$/
+          let passvaluecheck = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/
+     
+
+          if(namevaluecheck.test(username))
+          {
+              document.getElementById("uname").innerHTML=" "
+          }
+          else
+          {
+              document.getElementById("uname").innerHTML="username is invalid";
+             
+          }
+
+         
+          if(emailvaluecheck.test(useremail))
+          {
+              document.getElementById("uemail").innerHTML=" "
+          }
+          else
+          {
+              document.getElementById("uemail").innerHTML="user email is invalid";
+             
+          }
+
+         
+          if(passvaluecheck.test(pass))
+          {
+              document.getElementById("upass").innerHTML=" "
+          }
+          else
+          {
+              document.getElementById("upass").innerHTML="password is invalid";
+             
+          }
+
+
+          if(pass.match(cpass))
+          {
+              document.getElementById("ucpass").innerHTML=" "
+          }
+          else
+          {
+              document.getElementById("ucpass").innerHTML=" password does not match...";
+             
+          }
+
+      }
+    </script> 
+    
+  </body>
+</html>
